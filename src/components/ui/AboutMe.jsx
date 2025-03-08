@@ -1,6 +1,6 @@
 const AboutMe = () => {
   return (
-    <section className=" bg-[#f9f9ff] pt-0 md:pt-30 lg:pt-0">
+    <section className=" bg-[#f9f9ff] pt-0 md:py-30 lg:pt-0">
       <div className="max-w-6xl mx-auto grid grid-cols-1 mdl:grid-cols-[40%_60%] items-center gap-5 lg:gap-5 pt-25 md:pt-20 px-6 xxs:px-8 mdl:px-10  grid-flow-row-reverse ">
         <div className="space-y-7 md:pb-0 pb-10 order-1 mdl:order-2">
           <p className="uppercase text-sm tracking-widest">About Me</p>

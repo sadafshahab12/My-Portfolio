@@ -4,6 +4,7 @@
   --font-poppins: "Poppins";
   --color-mypurple: #8490ff;
   --color-mysky: #62bdfc;
+  --color-textlightBlack : #222222;
 }
 @layer components {
   .button {
