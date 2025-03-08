@@ -49,9 +49,15 @@ const Services = () => {
   ];
 
   return (
-    <section className=" bg-[#f9f9ff] pt-15 md:pt-20 lg:pt-30 px-5 sm:px-10">
+    <section className=" bg-[#f9f9ff] py-15 md:py-20 lg:py-30 px-5 sm:px-10">
       <div className="max-w-6xl mx-auto">
-        <motion.div className="space-y-4">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="space-y-4"
+        >
           <h1 className="font-bold xxs:font-semibold text-2xl xxxs:text-3xl xxs:text-4xl xs:text-5xl text-center">
             My Offered Services
           </h1>
@@ -64,9 +70,13 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeOut",
+                delay: index * 0.1,
+              }}
               viewport={{ once: true }}
               className="flex-left flex-col gap-6 text-textlightBlack  group hover:scale-105 transition-all duration-300  "
             >
