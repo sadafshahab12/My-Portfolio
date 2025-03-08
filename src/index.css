@@ -22,4 +22,7 @@
   .flex-between {
     @apply flex justify-between items-center;
   }
+  .service-group-hover-effect {
+    @apply  bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-mypurple group-hover:to-mysky transition-all duration-300
+  }
 }
