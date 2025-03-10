@@ -1,8 +1,10 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 
-import { projectData } from "./ProjectData";
+import { projectData } from "./Data";
+import { option } from "framer-motion/client";
+import { GoChevronDown } from "react-icons/go";
 const Project = () => {
   const [selectedFilter, setSelectedFilter] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
@@ -28,7 +30,7 @@ const Project = () => {
     indexOfLastProject
   );
   // 6 , 12 -- 6 sy 12 tk on page@ 2 , // 6 , 12 it is range of porjects index wise  6 sy 12 through slicing hm slicing k zarye per page index k according 6 project slice krk show krwarahy hn
-
+  const [isOpen, setIsOpen] = useState(false);
   const filterArray = [
     "All",
     "React JS",
@@ -42,7 +44,7 @@ const Project = () => {
   ];
 
   return (
-    <section className=" bg-[#f9f9ff] py-15 md:py-20 lg:py-30 px-5 sm:px-10">
+    <section className=" bg-[#f9f9ff] py-15 md:py-20 lg:pt-30  lg:pb-20 px-5 sm:px-10">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -60,8 +62,8 @@ const Project = () => {
             Mobile Responsiveness.
           </p>
         </motion.div>
-        <div className="filter py-10">
-          <ul className="text-12 uppercase flex justify-center gap-10 ">
+        <div className="filter py-10 sm:block hidden">
+          <ul className="text-12 uppercase flex justify-center gap-6 md:gap-10 ">
             {filterArray.map((filter, index) => (
               <li
                 key={index}
@@ -75,6 +77,46 @@ const Project = () => {
               </li>
             ))}
           </ul>
+        </div>
+        <div className="sm:hidden block  my-6 relative">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="w-full border py-3 px-4 bg-white text-textlightblack text-center font-light flex justify-between items-center"
+          >
+            {selectedFilter}{" "}
+            <GoChevronDown
+              className={`transition-transform ${isOpen ? "rotate-180" : ""}`}
+            />
+          </button>
+          <AnimatePresence>
+
+        
+          {isOpen && (
+            <motion.ul 
+            initial={{opacity : 0 , scale : 0.9}}
+            animate ={{opacity : 1 , scale : 1}}
+            exit={{opacity: 0 , scale: 0.9}}
+            className="absolute w-full border text-12 font-light py-3 text-center z-50 bg-white">
+              {filterArray.map((filter, index) => (
+                <li
+                  value={filter}
+                  key={index}
+                  onClick={() => {
+                    setSelectedFilter(filter);
+                    setIsOpen(false);
+                  }}
+                  className={`${
+                    selectedFilter === filter
+                      ? "bg-mypurple text-white"
+                      : "text-textlightblack"
+                  }  w-full text-12 font-light py-3 text-center block cursor-pointer`}
+                >
+                  {filter}
+                </li>
+              ))}
+            </motion.ul>
+          )}
+            </AnimatePresence>
         </div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -134,7 +176,7 @@ const Project = () => {
             ))}
           </div>
         </motion.div>
-        <div className="flex-center gap-8 p-8">
+        <div className="flex-center gap-4 xxs:gap-8 px-2 xs:px-8 py-8">
           <button
             disabled={currentPage === 1}
             onClick={() => setCurrentPage(currentPage - 1)}

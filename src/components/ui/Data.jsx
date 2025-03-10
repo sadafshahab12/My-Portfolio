@@ -3,6 +3,13 @@ import { IoLogoCss3, IoShieldOutline } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiClerk, SiFigma, SiFirebase, SiSanity } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
+import {
+  FaLaptopCode,
+  FaMobileAlt,
+  FaObjectGroup,
+  FaPalette,
+  FaTabletAlt,
+} from "react-icons/fa";
 export const projectData = [
   {
     title: "Shoose Ecommerce Website",
@@ -307,3 +314,97 @@ export const projectData = [
     technologies_used: ["html", "css", "javascript"],
   },
 ];
+export const services = [
+  {
+    title: "Frontend Web Development",
+    description:
+      "Build high-performance, scalable, and feature-rich websites using the latest technologies like Next.js, React.js, and Tailwind CSS.",
+    icon: <FaLaptopCode className="w-8 h-8 group-hover:text-mypurple  " />,
+  },
+  {
+    title: "Single Page Application (SPA) Development",
+    description:
+      "Build fast, interactive, and scalable single-page applications using React.js and Next.js. Ensure smooth navigation and real-time updates for an optimal user experience.",
+    icon: <FaReact className="w-8 h-8 group-hover:text-mypurple " />,
+  },
+  {
+    title: "Responsive Design",
+    description:
+      "Ensure seamless browsing on all screen sizes with fully responsive and mobile-friendly website layouts. Design visually appealing and user-friendly websites that enhance brand identity and user experience.",
+    icon: <FaMobileAlt className="w-8 h-8 group-hover:text-mypurple  " />,
+  },
+  {
+    title: "Figma to Website Conversion",
+    description:
+      "Transform Figma designs into pixel-perfect, fully functional websites with optimized performance.",
+    icon: <FaObjectGroup className="w-8 h-8 group-hover:text-mypurple  " />,
+  },
+  {
+    title: "Mobile Responsive Website",
+    description:
+      "Develop mobile-first, touch-friendly, and high-speed websites for the best user experience on smartphones and tablets.",
+    icon: <FaTabletAlt className="w-8 h-8 group-hover:text-mypurple  " />,
+  },
+
+  {
+    title: "Figma UI/UX Designing",
+    description:
+      "Design intuitive, engaging, and user-centric UI/UX prototypes in Figma for websites and mobile apps.",
+    icon: <FaPalette className="w-8 h-8 group-hover:text-mypurple  " />,
+  },
+];
+export const pricingPlans = [
+  {
+    id: 1,
+    name: "Basic Plan",
+    price: 299,
+    description: "For Small Businesses & Personal Websites",
+    features: [
+      "One-Page Website (Landing Page)",
+      "HTML, CSS, JavaScript (or React.js if needed)",
+      "Fully Responsive Design",
+      "Tailwind CSS for Fast Styling",
+      "Basic Animations & Effects",
+      "Contact Form Integration",
+      "Delivery in 5-7 Days",
+      "2 Rounds of Revisions",
+    ],
+    bestFor: ["Personal portfolios", "Freelancers", "Small businesses"],
+  },
+  {
+    id: 2,
+    name: "Standard Plan",
+    price: 599,
+    description: "For Growing Businesses & Startups",
+    features: [
+      "Up to 5 Pages (Home, About, Services, Contact, etc.)",
+      "Built with React.js or Next.js for Better Performance",
+      "Tailwind CSS + Custom Styling",
+      "API Integration (e.g., Contact Form, Third-Party APIs)",
+      "SEO Optimization for Better Google Ranking",
+      "Mobile & Tablet Friendly",
+      "Delivery in 7-10 Days",
+      "3 Rounds of Revisions",
+    ],
+    bestFor: ["Small businesses", "Agencies", "Startups"],
+  },
+  {
+    id: 3,
+    name: "Premium Plan",
+    price: 999,
+    description: "For Advanced & Scalable Websites",
+    features: [
+      "Custom Design & Development (Next.js + React.js)",
+      "Dynamic Content & CMS Integration (Sanity, Strapi, or Firebase)",
+      "E-commerce or Blog Functionality (Optional)",
+      "Performance Optimization & SEO-Friendly",
+      "Authentication & Secure User Login (Optional)",
+      "Advanced Animations & Interactive UI",
+      "Tailored UX/UI Experience",
+      "Delivery in 14-21 Days",
+      "5 Rounds of Revisions",
+    ],
+    bestFor: ["Large businesses", "Startups", "Custom web apps"],
+  },
+];
+

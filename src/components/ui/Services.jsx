@@ -1,52 +1,6 @@
-import {
-  FaLaptopCode,
-  FaMobileAlt,
-  FaObjectGroup,
-  FaPalette,
-  FaReact,
-  FaTabletAlt,
-} from "react-icons/fa";
+import { services } from "./Data";
 import { motion } from "framer-motion";
 const Services = () => {
-  const services = [
-    {
-      title: "Frontend Web Development",
-      description:
-        "Build high-performance, scalable, and feature-rich websites using the latest technologies like Next.js, React.js, and Tailwind CSS.",
-      icon: <FaLaptopCode className="w-8 h-8 group-hover:text-mypurple  " />,
-    },
-    {
-      title: "Single Page Application (SPA) Development",
-      description:
-        "Build fast, interactive, and scalable single-page applications using React.js and Next.js. Ensure smooth navigation and real-time updates for an optimal user experience.",
-      icon: <FaReact className="w-8 h-8 group-hover:text-mypurple " />,
-    },
-    {
-      title: "Responsive Design",
-      description:
-        "Ensure seamless browsing on all screen sizes with fully responsive and mobile-friendly website layouts. Design visually appealing and user-friendly websites that enhance brand identity and user experience.",
-      icon: <FaMobileAlt className="w-8 h-8 group-hover:text-mypurple  " />,
-    },
-    {
-      title: "Figma to Website Conversion",
-      description:
-        "Transform Figma designs into pixel-perfect, fully functional websites with optimized performance.",
-      icon: <FaObjectGroup className="w-8 h-8 group-hover:text-mypurple  " />,
-    },
-    {
-      title: "Mobile Responsive Website",
-      description:
-        "Develop mobile-first, touch-friendly, and high-speed websites for the best user experience on smartphones and tablets.",
-      icon: <FaTabletAlt className="w-8 h-8 group-hover:text-mypurple  " />,
-    },
-
-    {
-      title: "Figma UI/UX Designing",
-      description:
-        "Design intuitive, engaging, and user-centric UI/UX prototypes in Figma for websites and mobile apps.",
-      icon: <FaPalette className="w-8 h-8 group-hover:text-mypurple  " />,
-    },
-  ];
 
   return (
     <section className=" bg-[#f9f9ff] py-15 md:py-20 lg:py-30 px-5 sm:px-10">
