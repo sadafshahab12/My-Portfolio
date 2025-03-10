@@ -7,6 +7,7 @@ import Services from "./components/pages/Services";
 import Portfolio from "./components/pages/Portfolio";
 import Pricing from "./components/pages/Pricing";
 import Contact from "./components/pages/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   );

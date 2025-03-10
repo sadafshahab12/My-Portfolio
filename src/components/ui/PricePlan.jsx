@@ -27,13 +27,13 @@ const PricePlan = () => {
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className="group hover:bg-gradient-to-br hover:from-mypurple hover:bg-mysky hover:scale-105 transition duration-300  bg-[#f9f9ff] p-5 space-y-5 hover:text-white justify-items-center text-center hover:z-30"
+              className="group hover:bg-gradient-to-br hover:from-mypurple hover:bg-mysky hover:scale-105 transition duration-300  bg-[#f9f9ff] p-5 space-y-3 xxs:space-y-5 hover:text-white justify-items-center text-center hover:z-30 cursor-pointer"
             >
               <h1 className="sm:text-2xl font-semibold text-xl">{plan.name}</h1>
               <p className="text-12 font-light text-gray-600 group-hover:text-white">
                 {plan.description}
               </p>
-              <h2 className="text-3xl font-bold h-28 w-28 border-2 shadow-md bg-textlightBlack text-mypurple flex-center rounded-full ">
+              <h2 className="text-2xl sm:text-3xl font-bold h-22 xs:h-28 w-22 xs:w-28 border-2 shadow-md bg-textlightBlack text-mypurple flex-center rounded-full ">
                 ${plan.price}
               </h2>
               <div className="flex-left gap-5">
@@ -46,7 +46,7 @@ const PricePlan = () => {
                   </p>
                 ))}
               </div>
-              <div className="py-4">
+              <div className="py-1 xs:py-4">
                 {plan.features.map((feature, index) => (
                   <p
                     key={index}
