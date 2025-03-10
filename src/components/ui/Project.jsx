@@ -3,7 +3,6 @@ import { useState } from "react";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 
 import { projectData } from "./Data";
-import { option } from "framer-motion/client";
 import { GoChevronDown } from "react-icons/go";
 const Project = () => {
   const [selectedFilter, setSelectedFilter] = useState("All");
@@ -78,45 +77,48 @@ const Project = () => {
             ))}
           </ul>
         </div>
-        <div className="sm:hidden block  my-6 relative">
+        <div className="sm:hidden block  my-10 relative">
+          <p className="text-12 pb-3">Filter Projects</p>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="w-full border py-3 px-4 bg-white text-textlightblack text-center font-light flex justify-between items-center"
+            className="w-full border py-2 px-4 bg-white text-textlightblack text-center font-light flex justify-between items-center text-14"
           >
             {selectedFilter}{" "}
             <GoChevronDown
-              className={`transition-transform ${isOpen ? "rotate-180" : ""}`}
+              className={`transition-transform ${
+                isOpen ? "rotate-180" : "rotate-0"
+              } cursor-pointer`}
             />
           </button>
           <AnimatePresence>
-
-        
-          {isOpen && (
-            <motion.ul 
-            initial={{opacity : 0 , scale : 0.9}}
-            animate ={{opacity : 1 , scale : 1}}
-            exit={{opacity: 0 , scale: 0.9}}
-            className="absolute w-full border text-12 font-light py-3 text-center z-50 bg-white">
-              {filterArray.map((filter, index) => (
-                <li
-                  value={filter}
-                  key={index}
-                  onClick={() => {
-                    setSelectedFilter(filter);
-                    setIsOpen(false);
-                  }}
-                  className={`${
-                    selectedFilter === filter
-                      ? "bg-mypurple text-white"
-                      : "text-textlightblack"
-                  }  w-full text-12 font-light py-3 text-center block cursor-pointer`}
-                >
-                  {filter}
-                </li>
-              ))}
-            </motion.ul>
-          )}
-            </AnimatePresence>
+            {isOpen && (
+              <motion.ul
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                className="absolute top-20 w-full shadow-md text-12 font-light  text-center z-50 bg-white"
+              >
+                {filterArray.map((filter, index) => (
+                  <li
+                    value={filter}
+                    key={index}
+                    onClick={() => {
+                      setSelectedFilter(filter);
+                      setIsOpen(false);
+                    }}
+                    className={`${
+                      selectedFilter === filter
+                        ? "bg-mypurple text-white"
+                        : "text-textlightblack"
+                    }  w-full text-12 font-light py-3 text-center block cursor-pointer`}
+                  >
+                    {filter}
+                  </li>
+                ))}
+              </motion.ul>
+            )}
+          </AnimatePresence>
         </div>
         <motion.div
           initial={{ opacity: 0 }}
