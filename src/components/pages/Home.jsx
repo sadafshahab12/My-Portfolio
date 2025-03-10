@@ -1,5 +1,6 @@
 import AboutMe from "../ui/AboutMe";
 import Hero from "../ui/Hero";
+import Project from "../ui/Project";
 import ProjectStats from "../ui/ProjectStats";
 import Services from "../ui/Services";
 
@@ -10,6 +11,7 @@ const Home = () => {
       <AboutMe />
       <Services/>
       <ProjectStats/>
+      <Project/>
     </div>
   );
 };

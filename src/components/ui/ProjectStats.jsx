@@ -45,7 +45,7 @@ const ProjectStats = () => {
   }, [projectstats]);
   return (
     <section className="bg-gradient-to-r from-mypurple to-mysky min-h-70">
-      <div className="max-w-6xl mx-auto grid grid-cols-3 place-content-center gap-4 min-h-70">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 xxs:grid-cols-2 sm:grid-cols-3 place-content-center gap-4 min-h-70">
         {projectstats.map((project, index) => (
           <div key={index} className="text-white space-y-2 p-5 ">
             <h1 className="text-4xl font-bold text-center">
