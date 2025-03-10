@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-const Services = () => {
+import { pricingPlans } from "./Data";
+const PricePlan = () => {
   return (
-    <section className=" bg-[#f9f9ff]  px-5 sm:px-10">
+    <section className="py-10  px-5 sm:px-10">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -22,12 +23,48 @@ const Services = () => {
             Choose a Plan That Fits Your Needs!
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 mdl:grid-cols-3 gap-5 pt-10 ">
-    
+        <div className="grid grid-cols-1 sm:grid-cols-2 mdl:grid-cols-3  pt-10 ">
+          {pricingPlans.map((plan, index) => (
+            <div
+              key={index}
+              className="group hover:bg-gradient-to-br hover:from-mypurple hover:bg-mysky hover:scale-105 transition duration-300  bg-[#f9f9ff] p-5 space-y-5 hover:text-white justify-items-center text-center hover:z-30"
+            >
+              <h1 className="sm:text-2xl font-semibold text-xl">{plan.name}</h1>
+              <p className="text-12 font-light text-gray-600 group-hover:text-white">
+                {plan.description}
+              </p>
+              <h2 className="text-3xl font-bold h-28 w-28 border-2 shadow-md bg-textlightBlack text-mypurple flex-center rounded-full ">
+                ${plan.price}
+              </h2>
+              <div className="flex-left gap-5">
+                {plan.bestFor.map((best, index) => (
+                  <p
+                    key={index}
+                    className="text-10 bg-textlightBlack px-2 py-1 text-mysky shadow-md shadow-mysky "
+                  >
+                    {best}
+                  </p>
+                ))}
+              </div>
+              <div className="py-4">
+                {plan.features.map((feature, index) => (
+                  <p
+                    key={index}
+                    className="border-t group-hover:border-white last:border-b border-gray-400 py-3 text-12 text-gray-600 group-hover:text-white"
+                  >
+                    {feature}
+                  </p>
+                ))}
+              </div>
+              <button className="button w-full  block group-hover:bg-gradient-to-b group-hover:from-textlightBlack group-hover:to-textlightBlack">
+                Buy Now
+              </button>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-export default Services;
+export default PricePlan;
