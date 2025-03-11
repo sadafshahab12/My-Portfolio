@@ -1,9 +1,15 @@
 import { MdOutlineFileDownload } from "react-icons/md";
-
+import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <section className="bg-[#f9f9ff] pt-30 lg:pt-20">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 mdl:grid-cols-[60%_40%] items-center gap-5 lg:gap-5 px-6 xxs:px-8 mdl:px-10 h-full md:h-screen">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="max-w-6xl mx-auto grid grid-cols-1 mdl:grid-cols-[60%_40%] items-center gap-5 lg:gap-5 px-6 xxs:px-8 mdl:px-10 h-full md:h-screen"
+      >
         <div className="space-y-7 md:pb-0 pb-10">
           <p className="uppercase text-sm tracking-widest">This is ME</p>
           <h1 className="uppercase font-bold xxs:font-semibold text-3xl xxxs:text-4xl xxs:text-5xl xs:text-7xl">
@@ -44,7 +50,7 @@ const Hero = () => {
             className="absolute w-3/4 md:w-5/5 max-w-[300px] xs:max-w-[350px] object-cover rounded-full "
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -1,9 +1,8 @@
-import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { BsBoxArrowUpRight } from "react-icons/bs";
-
-import { projectData } from "./Data";
+import { AnimatePresence, motion } from "framer-motion";
 import { GoChevronDown } from "react-icons/go";
+import { projectData } from "./Data";
 const Project = () => {
   const [selectedFilter, setSelectedFilter] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);

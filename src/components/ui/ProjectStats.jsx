@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-
+import { motion } from "framer-motion";
 const ProjectStats = () => {
   const projectstats = useMemo(
     () => [
@@ -45,7 +45,13 @@ const ProjectStats = () => {
   }, [projectstats]);
   return (
     <section className="bg-gradient-to-r from-mypurple to-mysky min-h-70">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 xxs:grid-cols-2 sm:grid-cols-3 place-content-center gap-4 min-h-70">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="max-w-6xl mx-auto grid grid-cols-1 xxs:grid-cols-2 sm:grid-cols-3 place-content-center gap-4 min-h-70"
+      >
         {projectstats.map((project, index) => (
           <div key={index} className="text-white space-y-2 p-5 ">
             <h1 className="text-4xl font-bold text-center">
@@ -63,7 +69,7 @@ const ProjectStats = () => {
             <p className="text-sm font-light text-center">{project.label}</p>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

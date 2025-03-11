@@ -1,11 +1,13 @@
-import Project from "../ui/Project"
+import PageHeader from "../ui/PageHeader";
+import Project from "../ui/Project";
 
 const Portfolio = () => {
   return (
     <div>
-      <Project/>
+      <PageHeader home={"Home"} page={"Portfolio"} link={"/portfolio"} />
+      <Project />
     </div>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;
