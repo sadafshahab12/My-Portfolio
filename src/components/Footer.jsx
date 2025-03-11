@@ -1,6 +1,14 @@
 import React from "react";
 import { FaYahoo } from "react-icons/fa";
-import { IoMailOutline } from "react-icons/io5";
+import {
+  IoLogoFacebook,
+  IoLogoGithub,
+  IoLogoInstagram,
+  IoLogoLinkedin,
+  IoLogoTwitter,
+  IoLogoWhatsapp,
+  IoMailOutline,
+} from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -106,6 +114,50 @@ const Footer = () => {
             >
               <FaYahoo className="w-4 h-4" /> :{" "}
               <span>sadafshahab123@yahoo.com</span>{" "}
+            </a>
+          </div>
+          <div className="flex-left gap-4">
+            <a
+              href="https://www.linkedin.com/in/sadaf-shahab-ssr123"
+              target="_blank"
+              className="flex-left gap-4 text-12"
+            >
+              <IoLogoLinkedin className="w-4 h-4" />
+            </a>
+            <a
+              href="https://www.github.com/sadafshahab12"
+              target="_blank"
+              className="flex-left gap-4 text-12"
+            >
+              <IoLogoGithub className="w-4 h-4" />
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61556555833599"
+              target="_blank"
+              className="flex-left gap-4 text-12"
+            >
+              <IoLogoFacebook className="w-4 h-4" />
+            </a>
+
+            <a
+              href="https://www.x.com/sadafshahab12"
+              target="_blank"
+              className="flex-left gap-4 text-12"
+            >
+              <IoLogoTwitter className="w-4 h-4" />
+            </a>
+            <a
+              href="https://www.instagram.com/sadafshahab12"
+              className="flex-left gap-4 text-12"
+            >
+              <IoLogoInstagram className="w-4 h-4" />
+            </a>
+            <a
+              href="https://wa.me/+923402195735"
+              target="_blank"
+              className="flex-left gap-4 text-12"
+            >
+              <IoLogoWhatsapp className="w-4 h-4" />
             </a>
           </div>
         </div>
