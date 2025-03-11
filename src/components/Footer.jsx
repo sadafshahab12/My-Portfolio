@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaYahoo } from "react-icons/fa";
 import {
   IoLogoFacebook,
@@ -14,17 +14,17 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-textlightBlack">
-      <div className="max-w-6xl mx-auto p-5 grid grid-cols-3 ">
-        <div className="text-white">
+      <div className="max-w-6xl mx-auto p-5 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-8 ">
+        <div className="text-white space-y-2 justify-items-center">
           <img
             src="/logo.png"
             alt="logo"
             className="w-14 h-14 object-contain"
           />
-          <h1 className="uppercase font-bold xxs:font-semibold text-2xl xxxs:text-xl xxs:text-2xl xs:text-3xl">
+          <h1 className="uppercase font-bold xxs:font-semibold text-2xl xxxs:text-xl xxs:text-2xl xs:text-3xl text-center">
             Sadaf Shahab
           </h1>
-          <p className="text-mysky text-12 xxxs:text-sm font-light leading-5 xxxs:leading-7 ">
+          <p className="text-mysky text-10 xxxs:text-12 font-light leading-5 xxxs:leading-6 text-center ">
             A passionate{" "}
             <strong className="font-bold text-mypurple">
               Front-End Developer
@@ -96,7 +96,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="text-white space-y-3">
+        <div className="text-white space-y-3 justify-items-center col-span-1 xs:col-span-2 md:col-span-1 ">
           <h1 className=" font-bold xxs:font-semibold text-lg xs:text-xl">
             Follow Me
           </h1>

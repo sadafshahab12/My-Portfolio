@@ -1,8 +1,10 @@
-import React from 'react'
+import Project from "../ui/Project"
 
 const Portfolio = () => {
   return (
-    <div>Portfolio</div>
+    <div>
+      <Project/>
+    </div>
   )
 }
 

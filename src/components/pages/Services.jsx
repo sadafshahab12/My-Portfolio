@@ -1,8 +1,11 @@
-import React from 'react'
+import Service from "../ui/Service"
 
 const Services = () => {
   return (
-    <div>Services</div>
+    <div>
+      <Service/>
+
+    </div>
   )
 }
 

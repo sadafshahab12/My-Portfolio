@@ -1,7 +1,6 @@
 import { services } from "./Data";
 import { motion } from "framer-motion";
-const Services = () => {
-
+const Service = () => {
   return (
     <section className=" bg-[#f9f9ff] py-15 md:py-20 lg:py-30 px-5 sm:px-10">
       <div className="max-w-6xl mx-auto">
@@ -50,4 +49,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Service;

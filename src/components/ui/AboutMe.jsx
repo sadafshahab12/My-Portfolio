@@ -35,11 +35,16 @@ const AboutMe = () => {
             {`Let’s`} connect and build something amazing!{" "}
           </p>
         </div>
-        <div className="justify-items-center mdl:order-1 order-2">
+        <div className="justify-items-center mdl:order-1 order-2 relative flex justify-center items-center">
           <img
             src="/frame5.png"
             alt="sadaf-hero-img"
-            className="h-75 xxs:h-100 w-90"
+            className="h-auto w-full max-w-[200px] xxxs:max-w-[250px] xxs:max-w-sm "
+          />
+          <img
+            src="/aboutme.png"
+            alt="sadaf-hero-img"
+            className="absolute w-3/4 md:w-5/5 max-w-[300px] xs:max-w-[350px]  object-cover"
           />
         </div>
       </div>
