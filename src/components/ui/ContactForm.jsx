@@ -104,7 +104,7 @@ const ContactForm = () => {
               })} // Allows numbers, +, -, (), and spaces
               className="border border-mysky text-12 py-2 px-4 w-full block placeholder:text-textlightBlack outline-none focus:ring-2 focus:ring-mypurple transition-all ease-in duration-300"
             />
-            {errors.phonenumber && (
+            {errors.phone && (
               <p className="text-12 text-red-500 flex-left gap-2">
                 <BsExclamationCircle />
                 Invalid phone number format.
