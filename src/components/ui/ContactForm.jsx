@@ -12,7 +12,7 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm();
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState({ text: "", type: "" });
 
   const onSubmit = async (data) => {
     setLoading(true);
@@ -23,11 +23,11 @@ const ContactForm = () => {
         data,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
-      setMessage("Message sent successfully!");
+      setMessage({ text: "Message sent successfully!", type: "success" });
       reset();
     } catch (error) {
       console.log(error);
-      setMessage("Something went wrong. Try again!");
+      setMessage({ text: "Something went wrong. Try again!", type: "error" });
     } finally {
       setLoading(false);
     }
@@ -38,11 +38,19 @@ const ContactForm = () => {
         <h2 className="font-bold xxs:font-semibold text-xl xxxs:text-2xl xxs:text-3xl xs:text-4xl text-center pb-7">
           Contact Me
         </h2>
-        {message && (
-          <p className="text-14 text-green-700 flex-center gap-2 pb-4 capitalize">
+        {message.text && (
+          <p
+            className={`text-14  flex-center gap-2 pb-4 capitalize ${
+              message.type === "success" ? "text-green-700" : "text-red-500"
+            }`}
+          >
             {" "}
-            <AiOutlineCheckCircle className="w-6 h-6 " />
-            {message}
+            {message.type === "success" ? (
+              <AiOutlineCheckCircle className="w-6 h-6 " />
+            ) : (
+              <BsExclamationCircle className="w-6 h-6 " />
+            )}
+            {message.text}
           </p>
         )}
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
