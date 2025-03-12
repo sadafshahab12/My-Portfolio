@@ -8,7 +8,9 @@ const Navbar = () => {
   const handleToggleMenu = () => {
     setToggleMenu(!toggleMenu);
   };
-
+  const handleCloseMenu = () => {
+    setToggleMenu(false);
+  };
   return (
     <nav className="shadow fixed w-full z-50 bg-white">
       <div className="flex justify-between items-center md:px-10 px-5 py-2 max-w-6xl mx-auto">
@@ -81,8 +83,9 @@ const Navbar = () => {
           >
             <li>
               <Link
-                to={"/home"}
+                to={"/"}
                 className="uppercase cursor-pointer font-medium text-[13px] hover:text-[#8392fd] transition-all duration-500"
+                onClick={handleCloseMenu}
               >
                 Home{" "}
               </Link>
@@ -91,6 +94,7 @@ const Navbar = () => {
               <Link
                 to={"/about"}
                 className="uppercase cursor-pointer font-medium text-[13px] hover:text-[#8392fd] transition-all duration-500"
+                onClick={handleCloseMenu}
               >
                 About{" "}
               </Link>
@@ -99,6 +103,7 @@ const Navbar = () => {
               <Link
                 to={"/services"}
                 className="uppercase cursor-pointer font-medium text-[13px] hover:text-[#8392fd] transition-all duration-500"
+                onClick={handleCloseMenu}
               >
                 Services{" "}
               </Link>
@@ -107,6 +112,7 @@ const Navbar = () => {
               <Link
                 to={"/portfolio"}
                 className="uppercase cursor-pointer font-medium text-[13px] hover:text-[#8392fd] transition-all duration-500"
+                onClick={handleCloseMenu}
               >
                 Portfolio{" "}
               </Link>
@@ -115,6 +121,7 @@ const Navbar = () => {
               <Link
                 to={"/pricing"}
                 className="uppercase cursor-pointer font-medium text-[13px] hover:text-[#8392fd] transition-all duration-500"
+                onClick={handleCloseMenu}
               >
                 Pricing{" "}
               </Link>
@@ -123,6 +130,7 @@ const Navbar = () => {
               <Link
                 to={"/contact"}
                 className="uppercase cursor-pointer font-medium text-[13px] hover:text-[#8392fd] transition-all duration-500"
+                onClick={handleCloseMenu}
               >
                 Contact{" "}
               </Link>

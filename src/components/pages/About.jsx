@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import PageHeader from "../ui/PageHeader";
 import { motion } from "framer-motion";
 const About = () => {
+  useEffect(() => {
+    document.title = "About | Portfolio";
+  }, []);
   return (
     <div className="pt-4 pb-20 bg-[#f9f9ff]">
       <PageHeader home={"Home"} page={"About Me"} link={"/about"} />
