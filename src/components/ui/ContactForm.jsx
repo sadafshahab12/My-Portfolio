@@ -23,15 +23,16 @@ const ContactForm = () => {
         data,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
-      setTimeout(() => {
-        setMessage({ text: "Message sent successfully!", type: "success" });
-      }, 1500);
-
+      setMessage({ text: "Message sent successfully!", type: "success" });
       reset();
+      setTimeout(() => {
+        setMessage({ text: "", type: "success" });
+      }, 1500);
     } catch (error) {
       console.log(error);
+      setMessage({ text: "Something went wrong. Try again!", type: "error" });
       setTimeout(() => {
-        setMessage({ text: "Something went wrong. Try again!", type: "error" });
+        setMessage({ text: "", type: "error" });
       }, 1500);
     } finally {
       setLoading(false);
