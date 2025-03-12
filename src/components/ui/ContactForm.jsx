@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { BsExclamationCircle } from "react-icons/bs";
 import { AiOutlineCheckCircle } from "react-icons/ai";
-
+import { motion } from "framer-motion";
 const ContactForm = () => {
   const {
     register,
@@ -23,18 +23,29 @@ const ContactForm = () => {
         data,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
-      setMessage({ text: "Message sent successfully!", type: "success" });
+      setTimeout(() => {
+        setMessage({ text: "Message sent successfully!", type: "success" });
+      }, 1500);
+
       reset();
     } catch (error) {
       console.log(error);
-      setMessage({ text: "Something went wrong. Try again!", type: "error" });
+      setTimeout(() => {
+        setMessage({ text: "Something went wrong. Try again!", type: "error" });
+      }, 1500);
     } finally {
       setLoading(false);
     }
   };
   return (
     <section className=" bg-[#f9f9ff] py-15 md:py-20 lg:py-30 px-5 sm:px-10">
-      <div className="max-w-6xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="max-w-6xl mx-auto"
+      >
         <h2 className="font-bold xxs:font-semibold text-xl xxxs:text-2xl xxs:text-3xl xs:text-4xl text-center pb-7">
           Contact Me
         </h2>
@@ -136,7 +147,7 @@ const ContactForm = () => {
             {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
-      </div>
+      </motion.div>
     </section>
   );
 };
