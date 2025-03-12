@@ -39,7 +39,7 @@ const ContactForm = () => {
     }
   };
   return (
-    <section className=" bg-[#f9f9ff] py-15 md:py-20 lg:py-30 px-5 sm:px-10">
+    <section className=" bg-[#f9f9ff] py-10 md:py-15 lg:py-20 px-5 sm:px-10">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
