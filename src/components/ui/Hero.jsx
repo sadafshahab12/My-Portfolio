@@ -32,10 +32,14 @@ const Hero = () => {
           </p>
           <p>{`Let's`} create something amazing together!</p>
           <div className="flex-left gap-4">
-            <button className="button flex-center gap-2">
-              Download CV <MdOutlineFileDownload className="w-5 h-5" />
-            </button>
-            <button className="button">Hire me</button>
+            <a href="/sadaf resume.pdf" target="_blank">
+              <button className="button flex-center gap-2 sm:text-sm text-12">
+                Download CV <MdOutlineFileDownload className="w-5 h-5" />
+              </button>
+            </a>
+            <a href="/contact">
+              <button className="button sm:text-sm text-12">Hire me</button>
+            </a>
           </div>
         </div>
         <div className="relative flex justify-center items-center">
