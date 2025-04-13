@@ -1,9 +1,9 @@
-import PricePlan from "../ui/PricePlan";
-import PageHeader from "../ui/PageHeader";
 import { useEffect } from "react";
+import PageHeader from "../../components/ui/PageHeader";
+import PricePlan from "../../components/ui/PricePlan";
 const Pricing = () => {
   useEffect(() => {
-    document.title = "Pricing | Portfolio";
+    document.title = "Pricing | Sadaf Shahab Portfolio";
   }, []);
   return (
     <div className="pt-4 pb-20 bg-[#f9f9ff]">

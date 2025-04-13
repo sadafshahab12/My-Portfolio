@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import ContactForm from "../ui/ContactForm";
-import PageHeader from "../ui/PageHeader";
+import ContactForm from "../../components/ui/ContactForm";
+import PageHeader from "../../components/ui/PageHeader";
 
 const Contact = () => {
   useEffect(() => {
-    document.title = "Contact | Portfolio";
+    document.title = "Contact | Sadaf Shahab Portfolio";
   }, []);
   return (
     <div>

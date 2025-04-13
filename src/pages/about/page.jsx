@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import PageHeader from "../ui/PageHeader";
+import PageHeader from "../../components/ui/PageHeader";
 import { motion } from "framer-motion";
 const About = () => {
   useEffect(() => {
-    document.title = "About | Portfolio";
+    document.title = "About | Sadaf Shahab Portfolio";
   }, []);
   return (
     <div className="pt-4 pb-20 bg-[#f9f9ff]">

@@ -6,7 +6,7 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
         viewport={{ once: true }}
         className="max-w-6xl mx-auto grid grid-cols-1 mdl:grid-cols-[60%_40%] items-center gap-5 lg:gap-5 px-6 xxs:px-8 mdl:px-10 h-full md:h-screen"
       >
@@ -30,7 +30,7 @@ const Hero = () => {
             scalable code. Currently exploring the exciting world of AI to bring
             intelligent experiences to the web.
           </p>
-          <p>{`Let's`} create something amazing together!</p>
+          <p className="text-sm xs:text-[16px]">{`Let's`} create something amazing together!</p>
           <div className="flex-left gap-4">
             <a href="/sadaf resume.pdf" target="_blank">
               <button className="button flex-center gap-2 sm:text-sm text-12">

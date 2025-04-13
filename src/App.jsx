@@ -1,14 +1,15 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./components/pages/Home";
-import About from "./components/pages/About";
-import Services from "./components/pages/Services";
-import Portfolio from "./components/pages/Portfolio";
-import Pricing from "./components/pages/Pricing";
-import Contact from "./components/pages/Contact";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
+import Home from "./home/page";
+import Services from "./pages/services/page";
+import Portfolio from "./pages/portfolio/page";
+import Pricing from "./pages/pricing/page";
+import Contact from "./pages/contact/page";
+import About from "./pages/about/page";
+import Certificates from "./pages/certificate/page";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/certificates" element={<Certificates />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

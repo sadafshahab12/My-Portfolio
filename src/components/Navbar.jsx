@@ -23,7 +23,7 @@ const Navbar = () => {
         </div>
         {/* web navbar  */}
         <div className="md:block hidden">
-          <ul className="flex items-center gap-12 ">
+          <ul className="flex items-center gap-8  lg:gap-12 ">
             <li>
               <Link
                 to={"/"}
@@ -62,6 +62,14 @@ const Navbar = () => {
                 className="uppercase cursor-pointer font-medium text-[13px] hover:text-[#8392fd] transition-all duration-500"
               >
                 Pricing{" "}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/certificates"}
+                className="uppercase cursor-pointer font-medium text-[13px] hover:text-[#8392fd] transition-all duration-500"
+              >
+                Certificates{" "}
               </Link>
             </li>
             <li>
@@ -124,6 +132,15 @@ const Navbar = () => {
                 onClick={handleCloseMenu}
               >
                 Pricing{" "}
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/certificates"}
+                className="uppercase cursor-pointer font-medium text-[13px] hover:text-[#8392fd] transition-all duration-500"
+                onClick={handleCloseMenu}
+              >
+                Certificates{" "}
               </Link>
             </li>
             <li>

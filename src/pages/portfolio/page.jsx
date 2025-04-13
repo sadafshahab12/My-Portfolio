@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import PageHeader from "../ui/PageHeader";
-import Project from "../ui/Project";
+import PageHeader from "../../components/ui/PageHeader";
+import Project from "../../components/ui/Project";
 
 const Portfolio = () => {
   useEffect(() => {
-    document.title = "Portfolio | Portfolio";
+    document.title = "Portfolio | Sadaf Shahab Portfolio";
   }, []);
   return (
     <div>
