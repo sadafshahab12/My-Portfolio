@@ -66,7 +66,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to={"/certificates"}
+                to={"/certificate"}
                 className="uppercase cursor-pointer font-medium text-[13px] hover:text-[#8392fd] transition-all duration-500"
               >
                 Certificates{" "}
@@ -136,7 +136,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to={"/certificates"}
+                to={"/certificate"}
                 className="uppercase cursor-pointer font-medium text-[13px] hover:text-[#8392fd] transition-all duration-500"
                 onClick={handleCloseMenu}
               >

@@ -5,7 +5,6 @@ const Certificates = () => {
   return (
     <div>
       <Certificate/>
-      
     </div>
   )
 }
