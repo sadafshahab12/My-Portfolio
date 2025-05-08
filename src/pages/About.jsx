@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import PageHeader from "../../components/ui/PageHeader";
+
 import { motion } from "framer-motion";
+import PageHeader from "../components/ui/PageHeader";
 const About = () => {
   useEffect(() => {
     document.title = "About | Sadaf Shahab Portfolio";
@@ -50,7 +51,7 @@ const About = () => {
             </p>
           </div>
           <div className="justify-items-center mdl:order-1 order-2 relative flex justify-center items-center">
-            <img
+            <img 
               src="/frame5.png"
               alt="sadaf-hero-img"
               className="h-auto w-full max-w-[200px] xxxs:max-w-[250px] xxs:max-w-sm "

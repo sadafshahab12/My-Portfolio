@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import PageHeader from "../../components/ui/PageHeader";
-import Project from "../../components/ui/Project";
+
+import Project from "../components/ui/Project";
+import PageHeader from "../components/ui/PageHeader";
 
 const Portfolio = () => {
   useEffect(() => {

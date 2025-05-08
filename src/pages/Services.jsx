@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import PageHeader from "../../components/ui/PageHeader";
-import Service from "../../components/ui/Service";
+import PageHeader from "../components/ui/PageHeader";
+import Service from "../components/ui/Service";
 
 const Services = () => {
   useEffect(() => {

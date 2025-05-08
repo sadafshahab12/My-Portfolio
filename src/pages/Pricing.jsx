@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import PageHeader from "../../components/ui/PageHeader";
-import PricePlan from "../../components/ui/PricePlan";
+import PageHeader from "../components/ui/PageHeader";
+import PricePlan from "../components/ui/PricePlan";
 const Pricing = () => {
   useEffect(() => {
     document.title = "Pricing | Sadaf Shahab Portfolio";

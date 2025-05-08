@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import ContactForm from "../../components/ui/ContactForm";
-import PageHeader from "../../components/ui/PageHeader";
+import ContactForm from "../components/ui/ContactForm";
+import PageHeader from "../components/ui/PageHeader";
 
 const Contact = () => {
   useEffect(() => {

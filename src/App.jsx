@@ -1,15 +1,16 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer"; 
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Certificates from "./pages/Certificates";
+import Services from "./pages/Services";
+import Pricing from "./pages/Pricing";
+import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
 import NotFound from "./components/NotFound";
-import Home from "./home/page";
-import Services from "./pages/services/page";
-import Portfolio from "./pages/portfolio/page";
-import Pricing from "./pages/pricing/page";
-import Contact from "./pages/contact/page";
-import About from "./pages/about/page";
-import Certificates from "./pages/certificate/page";
+
 
 function App() {
   return (
