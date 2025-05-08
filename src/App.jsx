@@ -24,7 +24,7 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/certificate" element={<Certificates />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>
